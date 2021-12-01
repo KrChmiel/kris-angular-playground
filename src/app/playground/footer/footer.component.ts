@@ -6,9 +6,14 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  @Input() owner: string = 'Nobody'
+  @Input() owner: string = 'Nobody';
+  timesClicked: number = 0;
 
   constructor() {}
 
   ngOnInit() {}
+
+  footerClicked() {
+    this.timesClicked++;
+  }
 }
